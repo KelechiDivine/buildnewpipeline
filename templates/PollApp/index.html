@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Quiz Application </title>
+</head>
+<body>
+
+<div class="container">
+    <h1>Django quiz app</h1>
+    <hr>
+    <div>
+        {% for small_questions in exam %}
+        <table>
+            <tr>
+                <td>{{ small_questions.id }} ) {{ small_questions.Question}}</td>
+            </tr>
+
+            <tr>
+                <td>
+                    <input type="radio" class="rb" name="{{ small_questions.id }}" id="optionOne" value="{{ small_questions.optionOne }}">{{ small_questions.optionOne }}
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <input type="radio" class="rb" name="{{ small_questions.id }}" id="optionTwo" value="{{ small_questions.optionTwo }}">{{ small_questions.optionTwo }}
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <input type="radio" class="rb" name="{{ small_questions.id }}" id="optionThree" value="{{ small_questions.optionThree }}">{{ small_questions.optionThree }}
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <input type="radio" class="rb" name="{{ small_questions.id }}" id="optionFour" value="{{ small_questions.optionFour }}">{{ small_questions.optionFour}}
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <input type="radio" class="rb" name="{{ small_questions.id }}" id="optionFive" value="{{ small_questions.optionFive }}">{{ small_questions.optionFive }}
+                </td>
+            </tr>
+
+             <tr>
+                <td>
+                    <label>
+                        <input type="radio" class="rb" style="align-items: center"><b>{{ small_questions.corrans }}</b>
+                    </label>
+                </td>p
+            </tr>
+        </table>
+    </div>
+</div>
+
+</body>
+</html>
